@@ -40,7 +40,7 @@ function prepare_table() {
 function load_table(tableName, fields, buttons, columns) {
     let id = "#table";
     let table = $(id);
-    let url = '../api/database/' + tableName + '.php'
+    let url = '../api/database/' + tableName.toLowerCase() + '.php'
 
     let editor = new $.fn.dataTable.Editor({
         ajax:  url,
