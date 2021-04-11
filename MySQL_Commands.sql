@@ -10,13 +10,13 @@
 #       -----------------------
 #
 # Default Users for the Database:
-#       _______________________________
-#       | Username | Password         |
-#       -------------------------------
-#       | admin    | toor             |
-#       | user     | password         |
-#       | website  | secure_password  |
-#       -------------------------------
+#       ____________________________________
+#       | Username      | Password         |
+#       ------------------------------------
+#       | administrator | toor             |
+#       | user          | password         |
+#       | website_user  | secure_password  |
+#       ------------------------------------
 #
 #
 # Database =============================================================================================================
@@ -28,8 +28,8 @@ use fitness_app;
 # Create Users =========================================================================================================
 
 create user 'user'@'localhost' identified by 'password';
-create user 'admin'@'localhost' identified by 'toor';
-create user website@localhost identified by 'secure_password';
+create user 'administrator'@'localhost' identified by 'toor';
+create user 'website_user'@localhost identified by 'secure_password';
 
 # End ==================================================================================================================
 # Tables ===============================================================================================================
@@ -155,7 +155,7 @@ create table ForgotPassword (
 # Default Values =======================================================================================================
 
 insert into Roles(description, sql_user, sql_password) values ('Normal User of the Database, can only read!', 'user', 'password');
-insert into Roles(description, sql_user, sql_password) values('Administrator Account. Has all privileges', 'admin', 'toor');
+insert into Roles(description, sql_user, sql_password) values('Administrator Account. Has all privileges', 'administrator', 'toor');
 
 insert into Experience values(null, 'Beginner', 'Noch keine Erfahrung mit Workouts');
 insert into Experience values(null, 'Amateur', 'Ein paar Workouts da und dort gemacht, aber noch am Anfang');
@@ -223,7 +223,7 @@ create view GroupWorkoutCount as
 # End ==================================================================================================================
 # Grant Privileges =====================================================================================================
 
-GRANT ALL PRIVILEGES ON fitness_app.* TO 'admin'@'localhost';
+GRANT ALL PRIVILEGES ON fitness_app.* TO 'administrator'@'localhost';
 
 GRANT SELECT ON fitness_app.Experience TO 'user'@'localhost';
 GRANT SELECT ON fitness_app.gadget TO 'user'@'localhost';
@@ -240,9 +240,9 @@ GRANT SELECT ON fitness_app.Workouts TO 'user'@'localhost';
 GRANT SELECT ON fitness_app.groupworkoutcount TO 'user'@'localhost';
 GRANT SELECT ON fitness_app.userworkoutcount TO 'user'@'localhost';
 
-grant select, update, insert, delete on fitness_app.Users to website@localhost;
-grant select on fitness_app.Roles to website@localhost;
-grant select on fitness_app.Experience to website@localhost;
-grant select, delete, insert on fitness_app.ForgotPassword to website@localhost;
+grant select, update, insert, delete on fitness_app.Users to 'website_user'@'localhost';
+grant select on fitness_app.Roles to 'website_user'@'localhost';
+grant select on fitness_app.Experience to 'website_user'@'localhost';
+grant select, delete, insert on fitness_app.ForgotPassword to 'website_user'@'localhost';
 
 # End ==================================================================================================================

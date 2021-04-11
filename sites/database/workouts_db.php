@@ -23,7 +23,7 @@
 
     $role = get_role($_SESSION["username"]);
 
-    if($role["sql_user"] === "admin") {
+    if($role["sql_user"] === "administrator") {
         echo get_tab($table, $header, array('create', 'edit', 'remove'));
     } else {
         echo get_tab($table, $header);

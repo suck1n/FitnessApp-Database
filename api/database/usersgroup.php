@@ -60,7 +60,7 @@
         ->leftJoin('group', 'UsersGroup.groupID = group.id')
         ->leftJoin('Grouprole', 'UsersGroup.roleID = Grouprole.id');
 
-        if($role["sql_user"] !== "admin") {
+        if($role["sql_user"] !== "administrator") {
             $editor->where("username", $_SESSION["username"]);
         }
 

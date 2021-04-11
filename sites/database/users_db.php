@@ -20,7 +20,7 @@
 
     $role = get_role($_SESSION["username"]);
 
-    if($role["sql_user"] === "admin") {
+    if($role["sql_user"] === "administrator") {
         $header .= "<th data-name='role' data-type='select' data-column='Roles.sql_user'>Rolle</th>";
         echo get_tab($table, $header, array('edit', 'remove'));
     } else {

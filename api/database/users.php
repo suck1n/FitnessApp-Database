@@ -59,7 +59,7 @@
         )
         ->leftJoin('Experience', 'Users.experience = Experience.id');
 
-    if($role["sql_user"] === 'admin') {
+    if($role["sql_user"] === 'administrator') {
         $editor->fields(
             Field::inst( 'Roles.sql_user' )
                 ->validator(function ($data) {
