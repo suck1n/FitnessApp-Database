@@ -44,7 +44,7 @@
                     return empty($data) ? true : "This field is readonly";
                 })
         )
-        ->leftJoin('MuscleGroup', 'MuscleGroupWorkouts.muscleGroupID = musclegroup.id')
+        ->leftJoin('MuscleGroup', 'MuscleGroupWorkouts.muscleGroupID = MuscleGroup.id')
         ->leftJoin('Workouts', 'MuscleGroupWorkouts.workoutID = Workouts.id')
         ->process( $_POST )
         ->json();
