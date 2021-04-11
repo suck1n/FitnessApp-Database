@@ -15,7 +15,7 @@ $(() => {
     $(tables).each((_, newItem) => {
         $(newItem).on("click", () => {
             let currentItem = $("li.active");
-            let col = $(newItem).data("column");
+            let col = $(newItem).data("column").toLowerCase();
 
             if(currentItem.data("column") === col) {
                 return;
@@ -43,6 +43,6 @@ $(() => {
         });
     }
 
-    load_table($("li.active").data("column"))
+    load_table($("li.active").data("column").toLowerCase())
 });
 
