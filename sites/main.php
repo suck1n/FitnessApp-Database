@@ -94,7 +94,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.js"></script>
     <script src="https://cdn.datatables.net/v/bs4/dt-1.10.24/b-1.7.0/date-1.0.3/sl-1.3.3/datatables.min.js"></script>
-    <script src="../Editor-2.0.1/js/dataTables.editor.js"></script>
+    <script src="../Editor-2.0.1/js/dataTables.editor.crack.js"></script>
 
     <script src="../js/utility_table.js"></script>
     <script src="../js/main.js"></script>
