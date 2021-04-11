@@ -10,7 +10,7 @@ if(!isset($_SESSION["username"])) {
 include_once "utility_db.php";
 include_once "../../api/database.php";
 
-$table = "groupworkoutcount";
+$table = "GroupWorkoutCount";
 
 $header = "<th data-name='name'>Gruppe</th>
            <th data-name='count'>Anzahl der Workouts</th>";

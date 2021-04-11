@@ -5,13 +5,13 @@
         DataTables\Editor,
         DataTables\Editor\Field;
 
-    $editor = Editor::inst($db, 'groupworkoutcount', 'name' )
+    $editor = Editor::inst($db, 'GroupWorkoutCount', 'name' )
         ->fields(
-            Field::inst( 'groupworkoutcount.name' )
+            Field::inst( 'GroupWorkoutCount.name' )
                 ->validator(function () {
                     return 'View is readonly';
                 }),
-            Field::inst( 'groupworkoutcount.count' )
+            Field::inst( 'GroupWorkoutCount.count' )
                 ->validator(function () {
                     return 'View is readonly';
                 })

@@ -237,8 +237,8 @@ GRANT SELECT ON fitness_app.UsersGroup TO 'user'@'localhost';
 GRANT SELECT ON fitness_app.UsersWorkouts TO 'user'@'localhost';
 GRANT SELECT ON fitness_app.WorkoutsGadget TO 'user'@'localhost';
 GRANT SELECT ON fitness_app.Workouts TO 'user'@'localhost';
-GRANT SELECT ON fitness_app.groupworkoutcount TO 'user'@'localhost';
-GRANT SELECT ON fitness_app.userworkoutcount TO 'user'@'localhost';
+GRANT SELECT ON fitness_app.GroupWorkoutCount TO 'user'@'localhost';
+GRANT SELECT ON fitness_app.UserWorkoutCount TO 'user'@'localhost';
 
 grant select, update, insert, delete on fitness_app.Users to 'website_user'@'localhost';
 grant select on fitness_app.Roles to 'website_user'@'localhost';
